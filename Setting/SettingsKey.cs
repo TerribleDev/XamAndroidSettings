@@ -20,7 +20,7 @@ namespace SharedSettingsAbstraction.Setting
     public class SettingsKey<T>
         {
         public string key { get; private set; }
-        public T value { private get; private set; }
+        private T value; 
         public string Description { get; set; }
         public string Title { get; set; }
         private string _preferenceName;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GravatarSyncro.Android.Client.Setting
+namespace SharedSettingsAbstraction.Setting
 {
     class CastingSettingException : Exception
     {
