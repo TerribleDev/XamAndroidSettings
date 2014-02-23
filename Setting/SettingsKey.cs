@@ -38,11 +38,11 @@ namespace SharedSettingsAbstraction.Setting
             }
           
         /// <summary>
-        /// Get Setting, if it cannot find it or cast properly it will return default setting
+        /// Gets the setting
         /// </summary>
-        /// <param name="con">Context</param>
-        /// <returns>SettingsKey<T></returns>
-        public SettingsKey<T> getSetting(Context con )
+        /// <param name="con">context</param>
+        /// <returns></returns>
+        public T getSetting(Context con )
             {
                 var shared = con.GetSharedPreferences(_preferenceName, FileCreationMode.WorldReadable);
                 try
@@ -55,7 +55,7 @@ namespace SharedSettingsAbstraction.Setting
                     value = (T)_defaultValue;
                 }
 
-                return this;
+                return value;
             }
         /// <summary>
         /// Set the setting with a new setting
