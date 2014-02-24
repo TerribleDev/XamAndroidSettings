@@ -25,11 +25,13 @@ namespace SharedSettingsAbstraction.Setting
         public string Title { get; set; }
         private string _preferenceName;
         private T _defaultValue;
-        public List<string> SpinnerOptions { get; set; }
-            /// <summary>
-            /// Setup key
-            /// </summary>
-            /// <param name="_key"></param>
+           
+        /// <summary>
+        /// Abstraction around shared preferences
+        /// </summary>
+        /// <param name="_key">Name the key</param>
+        /// <param name="preferenceName">Name the preference (should be consistant accross all settings)</param>
+        /// <param name="defaultValue">Give a default value</param>
         public SettingsKey(string _key, string preferenceName, T defaultValue)
             {
                 key = _key;
