@@ -47,15 +47,8 @@ namespace SharedSettingsAbstraction.Setting
         public T getSetting(Context con )
             {
                 var shared = con.GetSharedPreferences(_preferenceName, FileCreationMode.WorldReadable);
-                try
-                {
                     value = (T)shared.All.Where(x => x.Key == key).FirstOrDefault().Value;
-                    if (value == null) SetSetting(con, _defaultValue);
-                }
-                catch (Exception)
-                {
-                    value = (T)_defaultValue;
-                }
+                    if (value == null) SetSetting(con, _defaultValue);           
 
                 return value;
             }
