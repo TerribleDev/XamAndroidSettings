@@ -44,7 +44,7 @@ namespace SharedSettingsAbstraction
         /// </summary>
         /// <param name="con">context</param>
         /// <returns></returns>
-        public T getSetting(Context con )
+        public T GetSetting(Context con )
             {
                 var shared = con.GetSharedPreferences(_preferenceName, FileCreationMode.WorldReadable);
                     value = (T)shared.All.Where(x => x.Key == key).FirstOrDefault().Value;
