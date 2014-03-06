@@ -44,8 +44,8 @@
     <Compile Include="Extensions\ISharedPreferencesEditor.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setting\CastingSettingException.cs" />
-    <Compile Include="Setting\SettingsKey.cs" />
+    <Compile Include="Exception\CastingSettingException.cs" />
+    <Compile Include="SettingsKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
