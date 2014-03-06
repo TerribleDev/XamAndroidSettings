@@ -21,8 +21,6 @@ namespace SharedSettingsAbstraction
         {
         public string key { get; private set; }
         private T value; 
-        public string Description { get; set; }
-        public string Title { get; set; }
         private string _preferenceName;
         private T _defaultValue;
            
@@ -37,6 +35,7 @@ namespace SharedSettingsAbstraction
                 key = _key;
                 _preferenceName = preferenceName;
                 _defaultValue = defaultValue;
+                
             }
           
         /// <summary>
@@ -47,7 +46,7 @@ namespace SharedSettingsAbstraction
         public T GetSetting(Context con )
             {
                 var shared = con.GetSharedPreferences(_preferenceName, FileCreationMode.WorldReadable);
-                    value = (T)shared.All.Where(x => x.Key == key).FirstOrDefault().Value;
+                value = (T)shared.All.Where(x => x.Key == key).FirstOrDefault().Value;
                     if (value == null) SetSetting(con, _defaultValue);           
 
                 return value;
