@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using SharedSettingsAbstraction.Extensions;
 
-namespace SharedSettingsAbstraction.Setting
+namespace SharedSettingsAbstraction
 {
         /// <summary>
         /// Key Value Pair
